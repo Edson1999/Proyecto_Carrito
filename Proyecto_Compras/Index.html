@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap min-->
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <!--Estilo-->
+    <link rel="stylesheet" href="./public/css/style.css">
+    <!--Letra-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <title>Compras</title>
+</head>
+<body>
+    <!--Menu Principal-->
+   <header class="header">
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <a id="astyle" class="navbar-brand" href="#">Compras</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        </nav>
+    </header>
+<!--Fin menu principal-->
+<!--Contenedores "Compra y Total"-->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div id="contstyle2" class="container p-3 my-3">
+                        <h3 id="styleh1"><b>Producto</b></h3>
+                        <div class="fotosoda">
+                            <h4>Soda Squirt</h4>
+                            <img class="img-fluid" src="./public/img/soda_1.jpg" alt="Squirt">
+                            <p class="precio"><span class="card-title">$10</span></p>
+                            <input type="number" id="idn1" value="1" hidden>
+                            <input type="text" id="idd1" value="Soda Squirt" hidden>
+                            <input type="number" id="idp1" value="10" hidden>
+                            <div id="buttonstyle">
+                                <button onclick="cargar_producto()">Comprar</button>
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="contstyle2" class="container p-3 my-3">
+                        <h3 id="styleh1"><b>Carrito</b></h3>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" id="idp"> - </th>
+                                    <td id="idd"> - </td>
+                                    <td id="idpe"> - </td>
+                                    <td id="idc">
+                                        <p>
+                                            <button onclick="totalClick(-1)">-</button>
+                                            <span id="totalClicks">1</span>
+                                            <button onclick="totalClick(+1)">+</button>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br><br>
+                        <h5 id="h5style">SubTotal:</h5>
+                        <div id="buttonstyle">
+                            <button onclick="window.location.href='./Index.html'">Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Script-->
+    <script src="./public/js/carrito.js"></script>
+</body>
+</html>
